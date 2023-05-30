@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_writestr.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsishika <syi378039@gmail.com>             +#+  +:+       +#+        */
+/*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 23:53:56 by tsishika          #+#    #+#             */
-/*   Updated: 2023/05/24 23:56:26 by tsishika         ###   ########.fr       */
+/*   Created: 2023/05/29 11:34:09 by tsishika          #+#    #+#             */
+/*   Updated: 2023/05/29 17:07:52 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
-{
-	char	buff;
-
-	buff = (char)c;
-	return (write(1, &buff, 1));
+static int ft_strlen(const char *s){
+	int i;
+	i = 0;
+	while(s[i] != '\0')
+		i++;
+	return (i);
 }
 
-int	ft_putstr(char *str)
+int	ft_putstr(char *s)
 {
-	size_t	len;
-
-	if (str == NULL)
+	if (s == NULL)
 		return (write(1, "(null)", 6));
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (write(1, str, len));
+	return (write(1, s, ft_strlen(s)));
 }

@@ -1,52 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_judge_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 23:54:01 by tsishika          #+#    #+#             */
-/*   Updated: 2023/05/30 11:09:23 by tsishika         ###   ########.fr       */
+/*   Created: 2023/05/29 11:54:03 by tsishika          #+#    #+#             */
+/*   Updated: 2023/05/29 17:35:48 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
-#include <unistd.h>
 #include <stdio.h>
 
-int	ft_printf(const char *s, ...)
+int	ft_judge_format(va_list data, const char format)
 {
-	int		print_len;
-	size_t	i;
-	va_list	data;
+	int print_len;
 
 	print_len = 0;
-	i = 0;
-	va_start(data, s);
-	while(s[i] != '\0')
-	{
-		if(s[i] == '%')
-		{
-			print_len += ft_judge_format(data, s[i + 1]);
-			i++;
-		}
-		else
-			print_len += ft_putchar(s[i]);
-		i++;
-	}
-	va_end(data);
+	if(format == 'c')
+		print_len += ft_putchar(va_arg(data, int));
+	if(format == 's')
+		print_len += ft_putstr(va_arg(data, char *));
+	// if(format == 'p')
+	if(format == 'd')
+		print_len += ft_putnbr(va_arg(data, int));
+	if(format == 'i')
+		print_len += ft_putnbr(va_arg(data, int));
+	// if(format == 'u')
+	// if(format == 'x')
+	// if(format == 'X')
+	if(format == '%')
+		print_len += write(1, "%", 1);
 	return (print_len);
-}
-
-#include <stdio.h>
-
-int main(void){
-	ft_printf("%c\n", 'A');
-	ft_printf("%s\n", "Ishikawa");
-	ft_printf("%d\n", 2147483647);
-	ft_printf("%i\n", 1 + 1);
-
-	// printf("aa%daa", i);
-	return (0);
 }

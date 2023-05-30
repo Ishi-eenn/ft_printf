@@ -8,7 +8,7 @@ OBJS		= $(SRCS:%.c=%.o)
 
 all: ${NAME}
 
-${NAME}:	${OBJS}
+${NAME}: ${OBJS}
 			${AR} ${NAME} ${OBJS}
 
 clean:

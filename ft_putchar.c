@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 23:53:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/05/29 17:09:56 by tsishika         ###   ########.fr       */
+/*   Created: 2023/05/29 11:28:44 by tsishika          #+#    #+#             */
+/*   Updated: 2023/05/29 11:34:04 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stddef.h>
-#include <stdarg.h>
-#include <unistd.h>
-
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int nb);
-int	ft_judge_format(va_list data, const char format);
-
-#endif
+int	ft_putchar(char c)
+{
+	return (write(1, &c, 1));
+}
