@@ -6,14 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:54:01 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:47:37 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:49:37 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
 
 int	ft_printf(const char *str, ...)
 {
