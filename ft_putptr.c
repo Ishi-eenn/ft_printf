@@ -6,12 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 23:55:57 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:28:23 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:29:57 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <inttypes.h>
 
 static int	ft_ptrlen(uintptr_t nb)
 {
