@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:47:37 by tsishika          #+#    #+#             */
-/*   Updated: 2023/05/29 17:05:50 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/05/30 12:40:31 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,21 @@ int	ft_putnbr(int nb)
 		ft_putchar(n + '0');
 	return (ft_intlen(nb));
 }
+
+int	ft_putunbr(unsigned int nb)
+{
+	unsigned int n = nb;
+	if(n >= 10){
+		ft_putunbr(n / 10);
+		ft_putunbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
+	return (ft_intlen(nb));
+}
+
+
+
 
 // #include <stdio.h>
 

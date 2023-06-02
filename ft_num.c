@@ -1,14 +1,26 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_num.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 11:19:48 by tsishika          #+#    #+#             */
-/*   Updated: 2023/05/29 11:28:22 by tsishika         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+// #include "ft_printf.h"
+// #include <stdio.h>
 
-#include "ft_printf.h"
+// int	ft_printf(const char *str, ...)
+// {
+// 	int		i;
+// 	int		result_length;
+// 	va_list	args;
 
+// 	i = 0;
+// 	result_length = 0;
+// 	va_start(args, str);
+// 	while (str[i] != '\0')
+// 	{
+// 		if (str[i] == '%')
+// 		{
+// 			result_length += ft_judge_format(args, str[i + 1]);
+// 			i++;
+// 		}
+// 		else
+// 			result_length += ft_putchar(str[i]);
+// 		i++;
+// 	}
+// 	va_end(args);
+// 	return (result_length);
+// }

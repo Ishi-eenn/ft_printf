@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 23:53:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 00:38:30 by tsishika         ###   ########.fr       */
+/*   Created: 2023/06/02 23:55:57 by tsishika          #+#    #+#             */
+/*   Updated: 2023/06/03 00:39:44 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-
-#include <stddef.h>
-#include <stdarg.h>
-#include <unistd.h>
+#include "ft_printf.h"
 #include <inttypes.h>
 
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_putnbr(int nb);
-int	ft_putunbr(unsigned int nb);
-int	ft_judge_format(va_list data, const char format);
-int	ft_puthex(unsigned int nb);
-int	ft_putheX(unsigned int nb);
-int	ft_putptr(uintptr_t nb);
+static int	ft_ptrlen(uintptr_t nb)
+{
+	int	len;
 
-#endif
+	len = 0;
+	if (nb == 0)
+		return (1);
+	while (nb > 0)
+	{
+		nb /= 16;
+		len++;
+	}
+	return (len);
+}
+
+static void	ft_rec_putptr(uintptr_t nb)
+{
+	while (nb >= 16)
+	{
+		ft_rec_putptr(nb / 16);
+		nb %= 16;
+	}
+	ft_puthex(nb);
+}
+
+int	ft_putptr(uintptr_t nb)
+{
+	write(1, "0x", 2);
+	ft_rec_putptr(nb);
+	return (ft_ptrlen(nb) + 2);
+}
