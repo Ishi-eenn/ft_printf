@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:53:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:50:32 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 03:43:03 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <inttypes.h>
 
+int	ft_printf(const char *str, ...);
 int	ft_putchar(char c);
 int	ft_putstr(char *s);
 int	ft_putnbr(int nb);
