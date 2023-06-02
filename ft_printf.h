@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:53:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 00:38:30 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:17:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_putchar(char c);
 int	ft_putstr(char *s);
 int	ft_putnbr(int nb);
 int	ft_putunbr(unsigned int nb);
-int	ft_judge_format(va_list data, const char format);
+int	ft_judge_format(va_list *data, const char format);
 int	ft_puthex(unsigned int nb);
 int	ft_putheX(unsigned int nb);
 int	ft_putptr(uintptr_t nb);

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:54:01 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 00:46:29 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:19:22 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
-
-// int	ft_printf(const char *s, ...)
-// {
-// 	int		print_len;
-// 	size_t	i;
-// 	va_list	data;
-
-// 	print_len = 0;
-// 	i = 0;
-// 	va_start(data, s);
-// 	while(s[i] != '\0')
-// 	{
-// 		if(s[i] == '%')
-// 		{
-// 			print_len += ft_judge_format(data, s[i + 1]);
-// 			i++;
-// 		}
-// 		else
-// 			print_len += ft_putchar(s[i]);
-// 		i++;
-// 	}
-// 	va_end(data);
-// 	return (print_len);
-// }
 
 int	ft_printf(const char *str, ...)
 {
@@ -52,7 +28,7 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			result_length += ft_judge_format(args, str[i + 1]);
+			result_length += ft_judge_format(&args, str[i + 1]);
 			i++;
 		}
 		else
@@ -78,6 +54,6 @@ int main(void){
 	ft_printf("%x\n", 10);
 	ft_printf("%X\n", 255);
 
-	// printf("aa%daa", i);
+	printf("%d %c %s %p\n", 1, '1', "11", &str[3]);
 	return (0);
 }
