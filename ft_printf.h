@@ -6,17 +6,17 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:53:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:42:03 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:48:35 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stddef.h>
-#include <stdarg.h>
-#include <unistd.h>
-#include <inttypes.h>
+# include <stddef.h>
+# include <stdarg.h>
+# include <unistd.h>
+# include <inttypes.h>
 
 int	ft_putchar(char c);
 int	ft_putstr(char *s);
