@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:54:01 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:43:03 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:47:01 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		result_length;
-	va_list	args;
+	va_listargs;
 
 	i = 0;
 	result_length = 0;
