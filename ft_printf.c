@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 23:54:01 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:19:22 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:22:31 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,20 @@ int	ft_printf(const char *str, ...)
 	return (result_length);
 }
 
+// #include <stdio.h>
 
-#include <stdio.h>
+// int main(void){
+// 	char str[] = "Ishikawa";
+// 	ft_printf("aaaa%c %c %c %c\n", 'A', 'B', 'C', 'D');
+// 	ft_printf("%s\n", str);
+// 	ft_printf("%p\n", &str[0]);
+// 	// printf("%p\n", &str[0]);
+// 	ft_printf("%d\n", 2147483647);
+// 	ft_printf("%u\n", 4294967295);
+// 	ft_printf("%i\n", 1 + 1);
+// 	ft_printf("%x\n", 10);
+// 	ft_printf("%X\n", 255);
 
-int main(void){
-	char str[] = "Ishikawa";
-	ft_printf("aaaa%c %c %c %c\n", 'A', 'B', 'C', 'D');
-	ft_printf("%s\n", str);
-	ft_printf("%p\n", &str[0]);
-	// printf("%p\n", &str[0]);
-	ft_printf("%d\n", 2147483647);
-	ft_printf("%u\n", 4294967295);
-	ft_printf("%i\n", 1 + 1);
-	ft_printf("%x\n", 10);
-	ft_printf("%X\n", 255);
-
-	printf("%d %c %s %p\n", 1, '1', "11", &str[3]);
-	return (0);
-}
+// 	printf("%d %c %s %p\n", 1, '1', "11", &str[3]);
+// 	return (0);
+// }

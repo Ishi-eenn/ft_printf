@@ -3,7 +3,7 @@ AR			= ar rc
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
-SRCS		= ft_putchar.c ft_printf.c ft_puthex.c ft_putnbr.c ft_putptr.c ft_num.c ft_judge_format.c
+SRCS		= ft_putchar.c ft_printf.c ft_puthex.c ft_putnbr.c ft_putptr.c ft_judge_format.c
 OBJS		= $(SRCS:%.c=%.o)
 
 all: ${NAME}
