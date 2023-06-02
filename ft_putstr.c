@@ -6,16 +6,18 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 11:34:09 by tsishika          #+#    #+#             */
-/*   Updated: 2023/05/29 17:07:52 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:29:41 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int ft_strlen(const char *s){
-	int i;
+static int	ft_strlen(const char *s)
+{
+	int	i;
+
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
