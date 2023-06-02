@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 23:55:57 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:29:57 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:41:58 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	ft_rec_putptr(uintptr_t nb)
 		ft_rec_putptr(nb / 16);
 		nb %= 16;
 	}
-	ft_puthex(nb);
+	ft_lowercase_puthex(nb);
 }
 
 int	ft_putptr(uintptr_t nb)

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 11:54:03 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:17:06 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:41:34 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_judge_format(va_list *data, const char format)
 	if(format == 'u')
 		print_len += ft_putunbr(va_arg(*data, unsigned int));
 	if(format == 'x')
-		print_len += ft_puthex(va_arg(*data, unsigned int));
+		print_len += ft_lowercase_puthex(va_arg(*data, unsigned int));
 	if(format == 'X')
-		print_len += ft_putheX(va_arg(*data, unsigned int));
+		print_len += ft_uppercase_puthex(va_arg(*data, unsigned int));
 	if(format == '%')
 		print_len += write(1, "%", 1);
 	return (print_len);

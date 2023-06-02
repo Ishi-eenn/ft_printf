@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:37:05 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 00:24:52 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:42:41 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,28 +27,28 @@ static int	ft_hexlen(unsigned int nb)
 	return (len);
 }
 
-int	ft_puthex(unsigned int nb)
+int	ft_lowercase_puthex(unsigned int nb)
 {
-	unsigned int n;
+	unsigned int	n;
 
 	n = nb;
 	while (nb >= 16)
 	{
-		ft_puthex(nb / 16);
+		ft_lowercase_puthex(nb / 16);
 		nb %= 16;
 	}
 	ft_putchar("0123456789abcdef"[nb]);
 	return (ft_hexlen(n));
 }
 
-int	ft_putheX(unsigned int nb)
+int	ft_uppercase_puthex(unsigned int nb)
 {
-	unsigned int n;
+	unsigned int	n;
 
 	n = nb;
 	while (nb >= 16)
 	{
-		ft_putheX(nb / 16);
+		ft_uppercase_puthex(nb / 16);
 		nb %= 16;
 	}
 	ft_putchar("0123456789ABCDEF"[nb]);
