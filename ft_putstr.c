@@ -6,13 +6,13 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 11:34:09 by tsishika          #+#    #+#             */
-/*   Updated: 2023/06/03 01:31:59 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:32:19 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int ft_strlen(const char *s)
+static int	ft_strlen(const char *s)
 {
 	int	i;
 
