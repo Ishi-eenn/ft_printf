@@ -1,3 +1,3 @@
 # ft_printf
 
-fin(2023.6.3)
+C言語のprintfを再実装する課題。
